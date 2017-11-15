@@ -1,4 +1,4 @@
-from s3tests import realistic
+import realistic
 import shutil
 import tempfile
 

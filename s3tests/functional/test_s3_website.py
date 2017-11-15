@@ -15,7 +15,7 @@ from nose.plugins.attrib import attr
 from nose.tools import timed
 from nose.plugins.skip import SkipTest
 
-from .. import common
+import common
 
 from . import (
     get_new_bucket,
@@ -1084,7 +1084,7 @@ def routing_setup():
   f = _test_website_prep(bucket, '')
   kwargs.update(f)
   bucket.set_canned_acl('public-read')
-  
+
   k = bucket.new_key('debug-ws.xml')
   kwargs['obj'].append(k)
   k.set_contents_from_string('', policy='public-read')
